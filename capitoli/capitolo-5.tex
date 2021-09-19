@@ -3,43 +3,131 @@
 % !TEX root = ../tesi.tex
 
 %**************************************************************
-\chapter{Progettazione e codifica}
-\label{cap:progettazione-codifica}
+\chapter{Confronto tra Angular e React}
+\label{cap:angular-react}
 %**************************************************************
+\intro{In questo capitolo viene effettuato il confronto tra Angular e React. Inizialmente viene presentata una panoramica introduttiva sulle tecnologie in questione, proseguendo poi con un paragone tra i dettagli tecnici e le performance, illustrando infine una riflessione conclusiva. }\\
 
-\intro{Breve introduzione al capitolo}\\
+\section{Introduzione}
 
-%**************************************************************
-\section{Tecnologie e strumenti}
-\label{sec:tecnologie-strumenti}
+\subsection{Angular}
+Angular \footcite{site:angular} è una piattaforma \gls{open-sourceg} per lo sviluppo di applicazioni web con \gls{licenza-mit-g}, evoluzione di AngularJS, sviluppata principalmente da Google. \\
+\begin{figure}[!h] 
+    \centering 
+    \includegraphics[width=0.8\columnwidth]{cap5/angular_logo.png} 
+    \caption{Angular Logo}
+\end{figure} \\
+Angular, essendo un \gls{frameworkg} molto vasto, fornisce diversi strumenti e tecnologie oltre alla possibilità di sviluppo di interfacce utente, tra le quali citiamo la gestione delle rotte, la dependency injection e il two way data-binding. Per questo motivo il \gls{frameworkg} offre agli sviluppatori maggiori soluzioni ai problemi comuni dello sviluppo di applicazioni web rispetto a React, avendo come rovescio della medaglia il fatto di creare dei progetti molto più pesanti a livello di memoria. Quest'ultimo aspetto viene approfondito successivamente nell' \hyperref[sec:performance]{apposita sezione}. \\
+Risulta utile citare, infine, che questa tecnologia è arrivata attualmente alla versione 12.1.4 e viene utilizzata da diverse aziende importanti per lo sviluppo del loro software proprietario.  \\
+Alcuni esempi di piattaforme create con Angular sono i seguenti: Gmail, MS Office, Paypal, Overleaf.
 
-Di seguito viene data una panoramica delle tecnologie e strumenti utilizzati.
+\subsection{React}
+React \footcite{site:react} è una libreria JavaScript \gls{open-sourceg} per la creazione di interfacce utente in applicazioni web, sviluppata e manutenuta principalmente da Facebook. \\
+\begin{figure}[!h] 
+    \centering 
+    \includegraphics[width=0.7\columnwidth]{cap5/react-logo.jpg} 
+    \caption{React Logo}
+\end{figure} \\
+React, essendo una libreria per la creazione di UI, tende a offrire meno strumenti e soluzioni a problemi comuni dello sviluppo di applicazioni web rispetto ad Angular, dovendosi affidare a librerie esterne create da diverse aziende o dalla community, con il vantaggio di avere un progetto più snello e leggero a livello di memoria. Questo aspetto viene approfondito successivamente nell' \hyperref[sec:performance]{apposita sezione}. \\
+Come fatto per la precedente tecnologia, è utile citare il fatto che React sia arrivato attualmente alla versione 17.0.2 e venga utilizzato da diverse aziende importanti per lo sviluppo delle loro piattaforme. \\
+Di seguito vengono riportati alcuni esempi di software sviluppato utilizzando React: Airbnb, Discord, Instagram.
 
-\subsection*{Tecnologia 1}
-Descrizione Tecnologia 1.
+\subsection{I componenti}
+Tutti i \gls{frameworkg} per il frontend di applicazioni web hanno un obiettivo comune: rendere lo sviluppo web più agevole e trasparente, andando a semplificare molte operazioni che, eseguite con gli strumenti di base come HTML, CSS e Javascript, risultano molto complesse e richiedono molto tempo. \\
+La soluzione a questo problema proposta da entrambe le tecnologie in esame, seppur gestita in maniera differente, consiste nei \textbf{component}. \\
+Un component corrisponde ad un mattoncino di base per la costruzione di applicazioni web complesse. Ogni component ha il controllo di una determinata sezione di schermo, acquisendone la responsabilità di renderizzare i dati ricevuti e gestire l'interazione con l'utente. Il fatto che ogni component possa averne altri al suo interno crea un modello di programmazione che consente una forte modularità del codice, favorendo il test di unità e la leggibilità del codice stesso.
 
-\subsection*{Tecnologia 2}
-Descrizione Tecnologia 2
+% ---------------------------------- DETTAGLI TECNICI ----------------------------------------------------
 
-%**************************************************************
-\section{Ciclo di vita del software}
-\label{sec:ciclo-vita-software}
+\section{Dettagli tecnici}
 
-%**************************************************************
-\section{Progettazione}
-\label{sec:progettazione}
+\subsection{Linguaggio di programmazione}
+\label{sec:linguaggio-programmazione}
+\textit{Angular} utilizza come linguaggio di programmazione predefinito \textbf{Typescript}, in quanto la creazione di un progetto avviene attraverso lo strumento dell'Angular CLI \footfullcite{angular-cli} \codeword{ng} e quest'ultimo provvede a creare un workspace che comprende una configurazione di base del linguaggio in questione. \\ \\
+\textit{React} invece consiste in una libreria Javascript e, utilizzando lo strumento \codeword{create-react-app} con il package manager npm \footfullcite{npm} per la creazione di un progetto, la configurazione base utilizza proprio il linguaggio \textbf{Javascript}. E' tuttavia possibile configurare un nuovo progetto con il linguaggio Typescript utilizzando lo stesso tool con un ulteriore flag: \codeword{npx create-react-app my-app-name --template typescript}.
 
-\subsubsection{Namespace 1} %**************************
-Descrizione namespace 1.
+\subsection{Gestione dei componenti}
+Come è stato descritto nell'introduzione, i component risultano i mattoni di base delle applicazioni web create con entrambe le tecnologie in esame. \\ \\
+\textit{Angular} implementa questi componenti utilizzando tre file che consentono di configurare diverse caratteristiche:
+\begin{itemize}
+	\item \textbf{file.component.ts}: un file Typescript che contiene l'implementazione di una classe nella quale si possono inserire lo stato e le funzionalità offerte all'utente attraverso funzioni che possono agire in modo asincrono ed event-driven;
+	\item \textbf{file.component.html}: un file che contiene codice HTML (con la possibilità di estenderne le funzionalità attraverso gli attributi direttive \footfullcite{angular-direttive}) e che corrisponde al template della vista che viene renderizzata dal browser;
+	\item \textbf{file.component.css}: un file CSS che contiene lo stile applicabile al template della vista del singolo componente. \\
+\end{itemize}
+\textit{React} invece implementa questi componenti in un unico file \textbf{component.js} (o component.tsx se il progetto è stato configurato per Typescript) attraverso l'utilizzo del codice \textbf{JSX}, ovvero un'estensione di Javascript (non obbligatoria in quanto è possibile utilizzare anche esclusivamente codice Javascript). \\
+Il codice JSX consiste in una sorta di fusione tra un linguaggio di template e il linguaggio Javascript, consentendo di creare "elementi react" che possono essere successivamente renderizzati nel DOM. \\
+I component possono essere definiti attraverso l'utilizzo delle classi javascript (implementando un costruttore che consente di settare lo stato e la funzione \codeword{render()}) o attraverso la definizione di una funzione (in questo caso si definisce "componente funzionale).
 
-\begin{namespacedesc}
-    \classdesc{Classe 1}{Descrizione classe 1}
-    \classdesc{Classe 2}{Descrizione classe 2}
-\end{namespacedesc}
+\subsection{Gestione dello stato}
+Lo stato, citato nella sezione precedente, corrisponde a dei dati appartenenti al componente che, se modificati, causano una nuova renderizzazione anche della vista del componente stesso o dei suoi "figli". \\ \\
+\textit{Angular} permette la gestione dello stato attraverso il \textbf{two way data-binding}, ovvero la possibilità, attraverso un'apposita sintassi, di legare in due direzioni i dati definiti nella classe (modello) con i dati usati dal template HTML (vista). In questo modo se i dati cambiano nel modello le modifiche vengono riflettute nella vista effettuando un nuovo rendering del componente e, nel verso opposto, se l'utente interagisce con la vista i dati del modello vengono aggiornati automaticamente. \\ \\
+\textit{React} invece permette la gestione dello stato solamente attraverso un \textbf{one way data-binding}, ovvero se i dati (modello) vengono modificati allora tale modifica viene riflessa anche nella vista effettuando un nuovo rendering del componente, ma non accade il contrario. Infatti per modificare i dati dello stato è necessario creare apposite funzioni che reagiscano agli eventi innescati dagli elementi presenti nel DOM e che modifichino i dati del modello.
 
+\subsection{Gestione dello stile}
+Lo stile da applicare al template HTML è supportato da entrambe le tecnologie, seppur con qualche lieve differenza. \\ \\
+\textit{Angular}, come descritto nella sezione relativa ai componenti, utilizza l'apposito \\ \textbf{file.component.css} per applicare lo stile con scope locale (ovvero sul singolo componente) al template HTML definito in un file separato. \\ \\
+In \textit{React} invece viene utilizzato principalmente un approccio in cui si usa un \textbf{unico file di stile} con codice CSS con scope globale (ovvero su tutta l'applicazione web). La libreria tuttavia mette a disposizione la possibilità di creare diversi \textbf{moduli CSS} in modo da poter definire gli stessi nomi di classe in file differenti senza il rischio di una collisione tra nomenclature.
 
-%**************************************************************
-\section{Design Pattern utilizzati}
+% ---------------------------------- PERFORMANCE ----------------------------------------------------
 
-%**************************************************************
-\section{Codifica}
+\section{Performance}
+\label{subsec:performance}
+
+\subsection{Memoria}
+\label{sec:performance}
+Come accennato nella \hyperref[sec:introduzione]{sezione introduttiva}, Angular è un \gls{frameworkg} completo, il quale offre molti più strumenti rispetto a React per lo sviluppo di applicazioni web. Questo aspetto, anche se può sembrare un netto punto a favore nei confronti di Angular, va analizzato in modo da valutare pro e contro. \\ \\
+\textit{Angular}, attraverso lo strumento apposito della \hyperref[sec:linguaggio-programmazione]{\textsl{Angular CLI}} alla versione 12.1.4, crea un progetto di base dal peso di circa \textbf{344MB} (sul sistema operativo Windows 10 Home). Nel progetto è presente una configurazione di base del linguaggio Typescript, oltre che a strumenti utili come, ad esempio, la gestione delle rotte, il two way data-binding e le librerie jasmine/karma per effettuate unit testing. Tutti questi ottimi strumenti, utili ad uno sviluppatore con l'intento di creare una piattaforma partendo da basi solide, possono tuttavia risultare superflui per creare delle applicazioni web più semplici o a scopo prototipale, rendendo solamente il progetto più pesante a livello di memoria. \\ \\
+\textit{React} invece, attraverso l'apposito strumento del \hyperref[sec:linguaggio-programmazione]{\textsl{Node Package Manager}} alla versione 7.19.1, crea un progetto di partenza dalle dimensioni su disco di circa \textbf{215MB} (sul sistema operativo Windows 10 Home). Come si può notare il workspace creato da React risulta molto più leggero in memoria, avvicinandosi alla metà delle dimensioni rispetto a quello generato con Angular, offrendo certamente meno servizi allo sviluppatore. Infatti risultano disponibili, oltre alla libreria jest per effettuare unit testing, pochi altri servizi necessari al funzionamento dell'applicazione web. Questo aspetto consente, specialmente ad uno sviluppatore esperto, di integrare attraverso il proprio package manager solamente le funzionalità di cui si ha bisogno in modo modulare, anche se ciò potrebbe risultare problematico ai programmatori novizi.
+
+\subsection{Site Rendering}
+\label{sec:site-rendering}
+Entrambe le tecnologie, per fornire al browser il documento da visualizzare a schermo, utilizzano di base il \textbf{Client-Side Rendering (CSR)}. Con una soluzione di rendering lato client, il server esegue il rendering di una pagina vuota con un dei riferimenti ai file Javascript dell'applicazione web. La pagina vuota viene inviata al browser client, che inizia a eseguire l'app, compila il tutto, quindi effettua le chiamate \gls{api} necessarie e a visualizzare il contenuto della pagina. \\
+Questa modalità di rendering consente di dare poco carico di lavoro al server in quanto invia una pagina vuota al client, tuttavia presenta problemi di diverse tipologie, ad esempio nel caso in cui l'applicazione web è di grandi dimensioni e il client ha una connessione lenta, poiché subirà un notevole ritardo nel caricamento e vedrà la pagina renderizzata solo quando sarà presente tutto il contenuto (causando un lungo caricamento con una pagina vuota alla prima navigazione). \\
+Per ovviare a questo problema sono disponibili principalmente due tecniche di pre-rendering:
+\begin{itemize}
+	\item \textbf{Server-Side Rendering (SSR)}: corrisponde alla capacità di un'applicazione di contribuire alla visualizzazione della pagina web sul server invece di renderizzarla nel browser. Ciò significa che se di un'applicazione viene eseguito il rendering lato server, il suo contenuto corrisponde a codice HTML che viene generato in anticipo dal server e successivamente passato al browser del client per essere visualizzato dall'utente. Con il rendering lato client è diverso, in quanto bisogna navigare su una pagina prima che vengano recuperati i dati dal server, il che significa che l'utente dovrebbe aspettare alcuni secondi prima di ricevere il contenuto della pagina per poterla finalmente renderizzare. Questa modalità di rendering effettua il fetch delle risorse necessarie per creare il contenuto della pagina web ad ogni richiesta da parte del client e ha alcuni vantaggi, tra i quali la possibilità di visualizzare quasi istantaneamente le pagine web (al costo di un maggior carico di lavoro al server) e un miglioramento delle performance SEO.
+	\item \textbf{Static-Site Generation (SSG)}: consiste in un'applicazione software che crea pagine HTML da modelli o componenti e da una determinata fonte di contenuto. La generazione statica del sito è simile al server-side rendering con l'eccezione che si esegue il rendering delle pagine in fase di build anziché ad ogni richiesta da parte del client. Questo significa che le pagine dell'applicazione web vengono generate al momento della build e il contenuto del sito non cambia a meno che non vengano aggiunti nuovi contenuti o component e venga effettuato nuovamente la build. Un'ulteriore possibilità (implementabile ad esempio nel \gls{frameworkg} Next.js), consiste nell'effettuare una nuova build del sito dopo un determinato e regolare intervallo di tempo, in modo da dare la possibilità al server di capire se sono presenti modifiche nelle risorse utilizzate per il contenuto delle pagine web. \\
+\end{itemize}
+\textit{React} di base fornisce esclusivamente il Client-Side Redering, tuttavia è una libreria integrata dal \gls{frameworkg} \textbf{Next.js} \footfullcite{nextjs}, il quale offre sia Server-Side Rendering che Static-Site Generation e una soluzione ibrida tra queste, come citato precedentemente.
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.35\columnwidth]{cap5/nextjs-logo} 
+    \caption{Next.js Logo}
+\end{figure}
+\noindent Anche \textit{Angular} fornisce di base esclusivamente il Client-Side Rendering, tuttavia è possibile integrare le tecnologie \textbf{Angular Universal} \footfullcite{angular-universal} per permettere il Server-Side Rendering e \textbf{Scully} \footfullcite{scully} per offrire lo Static-Site Generation.
+\begin{figure}[!h] 
+    \centering 
+    \includegraphics[width=0.45\columnwidth]{cap5/angular-universal-logo} 
+    \caption{Angular Universal Logo}
+\end{figure}
+
+\subsection{Rendering della UI}
+Parlando di performance di applicazioni web la dimensione non risulta un problema particolare, soprattutto quando si tratta di software di grandi dimensioni. Ciò che influisce maggiormente sulle prestazioni di runtime è la modalità di manipolazione del Document Object Model (DOM), ovvero la rappresentazione dell'ipertesto strutturata come modello orientato agli oggetti. Infatti la manipolazione del DOM risulta il cuore del web moderno e interattivo anche se, sfortunatamente, è anche molto più lento della maggior parte delle operazioni JavaScript. Per questo motivo è fondamentale analizzare come le due tecnologie implementano l'interazione con il DOM per valutarne le performance. \\ \\
+\textit{Angular} utilizza e manipola direttamente il \textbf{DOM reale} e sfrutta il data-binding bidirezionale, quindi tutte le modifiche apportate al modello vengono replicate anche nella vista. Durante la traduzione di un'applicazione pesante, potrebbero quindi rallentare le prestazioni. \\ \\
+\textit{React} invece utilizza il \textbf{Virtual DOM}, ovvero una copia più leggera del DOM realmente utilizzato per rendere dinamica l'applicazione. Per ogni oggetto DOM c'è un corrispondente oggetto DOM virtuale che corrisponde a una sua rappresentazione con le stesse proprietà, ma senza il potere di cambiare direttamente ciò che è presente a schermo. Mentre la manipolazione del DOM è lenta, quella del DOM virtuale è molto più veloce perché nulla viene renderizzato sullo schermo. \\
+L'utilità del DOM virtuale consiste nel fatto che quando viene eseguito il rendering di un elemento JSX, ogni singolo oggetto DOM virtuale viene aggiornato molto rapidamente.
+Una volta che il DOM virtuale è stato aggiornato, React confronta il DOM virtuale con un'istantanea dello stesso che è stata scattata subito prima dell'aggiornamento. Effettuando questa operazione React scopre esattamente quali oggetti DOM virtuali sono cambiati (processo di Diffing). Questo permette a React di aggiornare solamente gli oggetti necessari nel DOM reale, senza effettuare inutili rendering di oggetti che sono rimasti inalterati. \\
+Grazie a questa tipologia di innovazione nell'interazione con il DOM React può vantare di avere delle prestazioni nel rendering della user interface migliori rispetto ad Angular.
+
+% ---------------------------------- CONCLUSIONI ----------------------------------------------------
+
+\section{Conclusioni}
+
+\textit{Angular}:
+\begin{itemize}
+	\item consiste in un \gls{frameworkg} ricco e completo, molto basato su Typescript;
+	\item è un \gls{frameworkg} opinionated, ovvero limita o guida in modo molto stringente nel modo di fare le cose, risultando uno svantaggio per gli sviluppatori che vogliono costruire soluzioni diverse da quelle standard ma un vantaggio in quanto limita molto la probabilità di errori nel codice;
+	\item possiede un'ottima documentazione dei suoi strumenti;
+	\item richiede un certo tempo per essere appreso in modo efficacie in quanto è necessario studiare un intero ecosistema;
+	\item consente di dare una struttura solida al progetto sin dalla sua creazione e risulta adatto per applicazioni di grandi dimensioni senza un eccessivo quantitativo di aggiornamenti a schermo. \\
+\end{itemize}
+\textit{React}:
+\begin{itemize}
+	\item consiste in una libreria per sviluppo di interfacce grafiche, molto basata su Javascript, quindi molto leggera ma dipendente da librerie terze per effettuare molte operazioni necessarie allo sviluppo web;
+	\item è unopinionated, quindi risulta molto flessibile e potente per sviluppatori esperti ma con probabilità più alta di commettere errori nel codice rispetto ad Angular;
+	\item può vantare una community più vasta ed attiva rispetto ad Angular;
+	\item richiede un tempo di apprendimento minore rispetto ad Angular rendendo disponibili meno strumenti da imparare;
+	\item consente di effettuare progetti in modo più libero e veloce, risultando particolarmente utile quindi per creare prototipi e molto appetibile per utenti principianti che possiedono una base di Javascript. \\ \\
+\end{itemize}
+In conclusione all'analisi effettuata in questo documento è possibile affermare che nel dibattito Angular vs React non c'è una scelta migliore. Ogni soluzione ha i suoi vantaggi e svantaggi, si adatta a diverse tipologie di progetto e gruppi di lavoro. \\
+Personalmente durante lo sviluppo del progetto Voting-Online ho preferito usare Angular in quanto, una volta superata la fase iniziale di apprendimento, mi ha fornito tutti gli strumenti di cui avevo bisogno per creare l'applicazione web, mentre per effettuare le stesse operazioni con React mi sono trovato più volte a dover installare diverse librerie scritte da utenti della community che risultavano a volte limitate o comunque scarsamente documentate.

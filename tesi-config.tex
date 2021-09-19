@@ -2,6 +2,81 @@
 % file contenente le impostazioni della tesi
 %**************************************************************
 
+% 1 - Introduzione - Obiettivi
+
+\newcommand{\obiettiviObbligatori}{
+	 \item \underline{\textit{O01}}: Acquisizione competenze sulle tematiche sopra descritte;
+	 \item \underline{\textit{O02}}: Capacità di raggiungere gli obiettivi richiesti in autonomia seguendo il cronoprogramma;
+	 \item \underline{\textit{O03}}: Portare a termine le implementazioni previste con una percentuale di superamento pari all'80\%.
+	 
+}
+
+\newcommand{\obiettiviDesiderabili}{
+	 \item \underline{\textit{D01}}: Portare a termine le implementazioni previste con una percentuale di superamento pari al 100\%.
+}
+
+\newcommand{\obiettiviFacoltativi}{
+	 \item \underline{\textit{F01}}: Riuscire a renderizzare le maschere lato server usando Next.Js/React.
+}
+
+% 2 - Descrizione dello stage - Pianificazione del lavoro
+
+\newcommand{\prospettoSettimanale}{
+     % Personalizzare indicando in lista, i vari task settimana per settimana
+     % sostituire a XX il totale ore della settimana
+    \begin{itemize}
+        \item \textbf{Prima Settimana (40 ore)}
+        \begin{itemize}
+            \item Incontro con persone coinvolte nel progetto per discutere i requisiti e le richieste relativamente al sistema da sviluppare; 
+            \item Verifica credenziali e strumenti di lavoro assegnati;
+            \item Analisi del progetto da svolgere;
+            \item Ripasso del linguaggio Java SE;
+            \item Ripasso concetti Web (Servlet, servizi Rest, Json, ecc.).
+        \end{itemize}
+        \item \textbf{Seconda Settimana (40 ore)} 
+        \begin{itemize}
+            \item Studio principi generali di Spring Core (IOC, Dependency Injection);
+            \item Studio di SpringBoot.
+        \end{itemize}
+        \item \textbf{Terza Settimana (40 ore)} 
+        \begin{itemize}
+            \item Studio Spring DataRest;
+            \item Studio Spring Data/JPA.
+        \end{itemize}
+        \item \textbf{Quarta Settimana (40 ore)} 
+        \begin{itemize}
+            \item Ripasso linguaggio Javascript e studio TypeScript;
+            \item Studio del \gls{frameworkg} Angular.
+        \end{itemize}
+        \item \textbf{Quinta Settimana (40 ore)} 
+        \begin{itemize}
+            \item Analisi e studio del progetto Voting-on-line;
+            \item Progettazione ed implementazione della nuova maschera di login in Angular;
+            \item Progettazione ed implementazione nuova maschera "Voto" in Angular.
+        \end{itemize}
+        \item \textbf{Sesta Settimana (40 ore)} 
+        \begin{itemize}
+            \item Ripasso \gls{frameworkg} React;
+            \item Progettazione ed implementazione della nuova maschera di login in React;
+            \item Progettazione ed implementazione nuova maschera "Voto" in React.
+        \end{itemize}
+        \item \textbf{Settima Settimana (40 ore)} 
+        \begin{itemize}
+            \item Analisi comparativa dei due \gls{frameworkg} utilizzati.
+        \end{itemize}
+        \item \textbf{Ottava Settimana (40 ore)} 
+        \begin{itemize}
+            \item Considerazioni finali e stesura elaborato.
+        \end{itemize}
+    \end{itemize}
+}
+
+% 5 - Codeword 
+
+\newcommand{\codeword}[1]{%
+\texttt{\textcolor{magenta}{#1}}%
+}
+
 %**************************************************************
 % Frontespizio
 %**************************************************************
@@ -242,8 +317,9 @@
 
 \newcommand{\usecaseactors}[1]{\textbf{\\Attori Principali:} #1. \vspace{4pt}}
 \newcommand{\usecasepre}[1]{\textbf{\\Precondizioni:} #1. \vspace{4pt}}
-\newcommand{\usecasedesc}[1]{\textbf{\\Descrizione:} #1. \vspace{4pt}}
 \newcommand{\usecasepost}[1]{\textbf{\\Postcondizioni:} #1. \vspace{4pt}}
+\newcommand{\usecasedesc}[1]{\textbf{\\Descrizione:} #1. \vspace{4pt}}
+\newcommand{\usecasescenario}[1]{\textbf{\\Scenario Principale:} #1. \vspace{4pt}}
 \newcommand{\usecasealt}[1]{\textbf{\\Scenario Alternativo:} #1. \vspace{4pt}}
 
 %**************************************************************

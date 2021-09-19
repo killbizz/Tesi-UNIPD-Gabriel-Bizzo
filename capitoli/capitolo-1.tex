@@ -7,47 +7,100 @@
 \label{cap:introduzione}
 %**************************************************************
 
-Introduzione al contesto applicativo.\\
+% ESEMPI
 
-\noindent Esempio di utilizzo di un termine nel glossario \\
-\gls{api}. \\
+%\noindent Esempio di utilizzo di un termine nel glossario \\
+%\gls{api}. \\
 
-\noindent Esempio di citazione in linea \\
-\cite{site:agile-manifesto}. \\
+%\noindent Esempio di citazione in linea \\
+%\cite{site:agile-manifesto}. \\
 
-\noindent Esempio di citazione nel pie' di pagina \\
-citazione\footcite{womak:lean-thinking} \\
+%\noindent Esempio di citazione nel pie' di pagina \\
+%citazione\footcite{womak:lean-thinking} \\
 
 %**************************************************************
 \section{L'azienda}
 
-Descrizione dell'azienda.
+Sync Lab nasce come Software house tramutatasi rapidamente in System Integrator attraverso un processo di maturazione delle competenze tecnologiche, metodologiche ed applicative nel dominio del software. \\
+L'azienda, propone sul mercato interessanti quanto innovativi prodotti software, nati nel loro laboratorio di ricerca e sviluppo. Attraverso questi prodotti Sync Lab ha gradualmente conquistato significativamente fette di mercato nei seguenti settori: mobile, videosorveglianza e sicurezza delle infrastrutture informatiche aziendali. \\
+Attualmente, Sync Lab ha più di 150 clienti diretti e finali, con un organico aziendale di 200 dipendenti distribuiti tra le 5 sedi dislocate in tutta Italia.
+
+\begin{figure}[!h] 
+    \centering 
+    \includegraphics[width=0.7\columnwidth]{sync_lab_logo} 
+    \caption{Logo dell'azienda Sync Lab}
+\end{figure}
 
 %**************************************************************
-\section{L'idea}
+\section{Scelta dell'azienda}
 
-Introduzione all'idea dello stage.
+Il primo contatto avuto con l'azienda Sync Lab è avvenuto allo StageIT 2021, effettuato in modalità telematica. Il presentatore dell'azienda è stato l’ingegnere Fabio Pallaro, il quale ha spiegato in modo chiaro ed esaustivo le caratteristiche dell'azienda. La motivazione principale che mi ha spinto a scegliere Sync Lab è stata la conferma da parte del sig. Pallaro di accontentare gli stagisti rispetto alle loro preferenze nell'ambito informatico, permettendomi di effettuare un approfondimento a tutto tondo nell'ambito dello sviluppo di applicazioni web.
+
+%**************************************************************
+\section{Il progetto Voting-Online}
+
+La votazione elettronica, anche detta e-Voting (dall'inglese <<electronic voting>>), consiste in un insieme di metodologie che permettono ai cittadini l'espressione del proprio voto e la gestione delle preferenze attraverso tecnologie elettroniche e informatiche. \\
+Gli applicativi software che realizzano questa tipologia di sistema permettono all'utente di accedere ad una maschera per effettuare una votazione, passando precedentemente per una procedura di autenticazione in modo da collegare il voto ad una persona fisica in modo sicuro. Questi sistemi, oltre ad acquisire le preferenze degli elettori, offrono ad un insieme di amministratori della piattaforma degli strumenti per creare e configurare diverse tipologie di elezioni, oltre che per gestire l'inserimento e/o la rimozione dei partiti partecipanti. \\
+Il progetto di stage \textit{Voting-Online}, proposto da Sync Lab, consiste nell'analisi, progettazione e realizzazione di un’applicazione web riguardante il suddetto ambito. Tale progetto nasce per mostrare, principalmente ad aziende private, quella che potrebbe essere un'applicazione web di e-Voting attraverso un prototipo. \\
+Il progetto in questione si focalizza sullo sviluppo del \gls{frontend}, e quindi sull'approfondimento delle tecnologie ad esso connesse come Angular e React, anche se una parte del lavoro prevede lo studio di Java e del \gls{frameworkg} Spring in modo da acquisire una conoscenza di base anche sul lato \gls{backend}.
+L'argomento principale di tale progetto risulta quindi lo sviluppo delle interfacce grafiche corrispondenti alle maschere per fornire le funzionalità necessarie agli utenti e agli amministratori, utilizzando i linguaggi Javascript e Typescript. \\
+Lo sviluppo del \gls{frontend}, utilizzando le due tecnologie precedentemente citate, ha permesso di effettuare in conclusione un'attenta analisi comparativa tra di esse, approfondita nell'{\hyperref[cap:angular-react]{apposita sezione}}.
+
+%**************************************************************
+\section{Strumenti di sviluppo e di supporto}
+\label{sez:strumenti-smartworking}
+Strumenti software utilizzati per lo sviluppo, il versionamento e la documentazione dell'applicativo durante le diverse fasi del suo ciclo di vita.
+
+\subsection*{Draw.io}
+\textit{Draw.io} è una piattaforma online gratuita per la creazione di varie tipologie di diagrammi, esportabili come file in diversi formati (tra i quali PDF o JPEG). Tra le diverse possibilità offerte  dal software sono presenti i diagrammi di flusso, di processo, \gls{umlg}, \gls{Entita'-Relazione} e di rete. Questa piattaforma è stata utilizzata per creare i diagrammi dei casi d'uso, utilizzati per l'analisi dei requisiti illustrata nel terzo capitolo.
+
+\subsection*{Visual Studio Code}
+\textit{Visual Studio Code} è un <<Integrated development environment>> (IDE), ovvero una piattaforma che consente di migliorare l'esperienza di sviluppo software e, tra i vari strumenti che rende disponibile, contiene un editor di codice sorgente. Grazie alle numerose estensioni che è possibile installare, si può utilizzare una vasta gamma di linguaggi di programmazione e funzionalità di supporto alla scrittura del codice. Uno strumento disponibile grazie a questo IDE che risulta molto utile è l'intelliSense, ovvero una forma di completamento automatico del codice e di visualizzazione grafica di informazioni durante lo sviluppo.
+
+\subsection*{Overleaf}
+\textit{Overleaf} è un editor LaTeX collaborativo basato su cloud e viene utilizzato per scrivere, modificare e pubblicare varie tipologie di documenti. Questo software è stato utilizzato per la scrittura del documento tecnico, richiesto dall'azienda insieme al codice sorgente.
+
+\subsection*{Git}
+\textit{Git} è uno strumento per il controllo di versione distribuito utilizzabile da interfaccia a riga di comando. E' possibile utilizzare il software in questione per collaborare con più membri di un team e per controllare la versione del codice prodotto così da poter ritornare ad una versione stabile in caso di problemi.
+
+%**************************************************************
+\section{Strumenti organizzativi}
+\label{sez:strumenti-organizzativi}
+Strumenti software utilizzati per il coordinamento e la pianificazione in accordo con l'azienda.
+
+\subsection*{Discord}
+\textit{Discord} è una piattaforma di VoIP, messaggistica istantanea e distribuzione digitale progettata per la comunicazione tra comunità di videogiocatori, ma utilizzabile per diversi scopi. Gli utenti possono comunicare con chiamate vocali, video-chiamate, messaggi di testo, media e file in chat private o come membri di un server. Questo strumento permette lo scambio di messaggi e materiale digitale tra gli stagisti e i dipendenti dell'azienda in modo facile e veloce.
+
+\subsection*{Google Sheets}
+\textit{Google Sheets} è un programma per fogli di calcolo incluso come parte della suite di editor di documenti basata sul Web gratuita offerta da Google. La piattaforma consente agli utenti di creare e modificare file collaborando con altri utenti in tempo reale. Attraverso questo software è stato possibile compilare un diario digitale che ha permesso al tutor aziendale di controllare lo stato di avanzamento del lavoro dello stage in modo accurato e giornaliero.
+\subsection*{Notion}
+\textit{Notion} è una piattaforma che fornisce componenti come note, database, calendari, promemoria. Gli utenti possono collegare questi componenti per creare i propri sistemi per la gestione della conoscenza, prendere appunti, gestire dati e progetti. L'azienda Sync Lab, sfruttando questo applicativo, gestisce in modo semplice ed efficace la problematica del flusso di persone in ufficio in tempo di pandemia da Covid-19, permettendo di segnalare la propria presenza in sede fino ad un numero massimo di persone raggiungibile ogni giorno.
 
 %**************************************************************
 \section{Organizzazione del testo}
 
+\subsection{Struttura del documento}
+Il documento, suddiviso in sei capitoli, è strutturato nella seguente modalità:
 \begin{description}
-    \item[{\hyperref[cap:processi-metodologie]{Il secondo capitolo}}] descrive ...
+    \item[{\hyperref[cap:introduzione]{Il primo capitolo}}] effettua una breve introduzione all'azienda e al lavoro effettuato durante lo stage curricolare presso Sync Lab.
+
+    \item[{\hyperref[cap:descrizione-stage]{Il secondo capitolo}}] descrive lo stage elencando gli obiettivi da raggiungere, la pianificazione del lavoro e l'analisi preventiva dei rischi.
     
-    \item[{\hyperref[cap:descrizione-stage]{Il terzo capitolo}}] approfondisce ...
+    \item[{\hyperref[cap:analisi-requisiti]{Il terzo capitolo}}] approfondisce l'analisi dei requisiti effettuata per il progetto Voting-Online.
     
-    \item[{\hyperref[cap:analisi-requisiti]{Il quarto capitolo}}] approfondisce ...
+    \item[{\hyperref[cap:progettazione-codifica]{Il quarto capitolo}}] approfondisce le tecnologie utilizzate nel progetto Voting-Online, la progettazione del \gls{backend} e del \gls{frontend} e una descrizione dettagliata dei relativi software ottenuti dalla loro codifica.
     
-    \item[{\hyperref[cap:progettazione-codifica]{Il quinto capitolo}}] approfondisce ...
+    \item[{\hyperref[cap:angular-react]{Il quinto capitolo}}] approfondisce le tecnologie utilizzate per lo sviluppo del \gls{frontend}, ovvero Angular e React, effettuando un confronto tra diversi dettagli tecnici e considerazioni sulle performance.
     
-    \item[{\hyperref[cap:verifica-validazione]{Il sesto capitolo}}] approfondisce ...
+    \item[{\hyperref[cap:conclusioni]{Il sesto capitolo}}] contiene un'analisi del lavoro svolto e le conclusioni tratte.
     
-    \item[{\hyperref[cap:conclusioni]{Nel settimo capitolo}}] descrive ...
+    %\item[{\hyperref[cap:conclusioni]{Nel settimo capitolo}}] descrive ...
 \end{description}
 
+\subsection{Convenzioni tipografiche}
 Riguardo la stesura del testo, relativamente al documento sono state adottate le seguenti convenzioni tipografiche:
 \begin{itemize}
 	\item gli acronimi, le abbreviazioni e i termini ambigui o di uso non comune menzionati vengono definiti nel glossario, situato alla fine del presente documento;
-	\item per la prima occorrenza dei termini riportati nel glossario viene utilizzata la seguente nomenclatura: \emph{parola}\glsfirstoccur;
+	\item per la prima occorrenza dei termini riportati nel glossario viene utilizzata la nomenclatura "\emph{parola(abbreviazione)}", mentre per ogni successiva occorrenza verrà utilizzata solamente l'abbreviazione di tale termine;
 	\item i termini in lingua straniera o facenti parti del gergo tecnico sono evidenziati con il carattere \emph{corsivo}.
 \end{itemize}

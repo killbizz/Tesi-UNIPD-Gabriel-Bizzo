@@ -116,6 +116,8 @@
                                         % 2. eseguire: biber tesi
                                         % 3. compilare ancora tesi.tex.
 
+\usepackage{float}
+
 \input{tesi-config}                     % file con le impostazioni personali
 
 \begin{document}
@@ -125,7 +127,6 @@
 \frontmatter
 \input{inizio-fine/frontespizio}
 \input{inizio-fine/colophon}
-\input{inizio-fine/dedica}
 \input{inizio-fine/sommario}
 \input{inizio-fine/ringraziamenti}
 \input{inizio-fine/indici}
@@ -136,14 +137,14 @@
 %**************************************************************
 \mainmatter
 \input{capitoli/capitolo-1}             % Introduzione
-\input{capitoli/capitolo-2}             % Processi
-\input{capitoli/capitolo-3}             % Kick-Off
-\input{capitoli/capitolo-4}             % Concept Preview
-\input{capitoli/capitolo-5}             % Product Prototype
-\input{capitoli/capitolo-6}             % Product Design Freeze e SOP
-\input{capitoli/capitolo-7}             % Conclusioni
-\appendix                               
-\input{capitoli/capitolo-A}             % Appendice A
+%\input{capitoli/capitolo-2}             % Processi e metodologie
+\input{capitoli/capitolo-2}             % Descrizione stage
+\input{capitoli/capitolo-3}             % Analisi dei requisiti
+\input{capitoli/capitolo-4}             % Progettazione e codifica
+\input{capitoli/capitolo-5}             % Confronto Angular React
+\input{capitoli/capitolo-6}             % Conclusioni
+%\appendix                               
+%\input{capitoli/capitolo-A}             % Appendice A
 
 %**************************************************************
 % Materiale finale

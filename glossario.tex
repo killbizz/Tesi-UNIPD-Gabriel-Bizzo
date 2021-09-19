@@ -6,9 +6,27 @@
 
 \newacronym[description={\glslink{apig}{Application Program Interface}}]
     {api}{API}{Application Program Interface}
+    
+\newacronym[description={\glslink{guig}{Graphical User Interface}}]
+    {gui}{GUI}{Graphical User Interface}
 
 \newacronym[description={\glslink{umlg}{Unified Modeling Language}}]
     {uml}{UML}{Unified Modeling Language}
+
+\newacronym[description={\glslink{backendg}{Backend}}]
+    {backend}{BE}{Backend}
+    
+\newacronym[description={\glslink{frontendg}{Frontend}}]
+    {frontend}{FE}{Frontend}
+    
+\newacronym[description={\glslink{inversion-of-controlg}{Inversion of Control}}]
+    {inversion of control}{IoC}{Inversion of Control}
+    
+\newacronym[description={\glslink{restg}{Representational State Transfer}}]
+    {rest}{REST}{Representational State Transfer}
+    
+\newacronym[description={\glslink{dbmsg}{Database Management System}}]
+    {dbms}{DBMS}{Database Management System}
 
 %**************************************************************
 % Glossario
@@ -23,10 +41,116 @@
     description={in informatica con il termine \emph{Application Programming Interface API} (ing. interfaccia di programmazione di un'applicazione) si indica ogni insieme di procedure disponibili al programmatore, di solito raggruppate a formare un set di strumenti specifici per l'espletamento di un determinato compito all'interno di un certo programma. La finalità è ottenere un'astrazione, di solito tra l'hardware e il programmatore o tra software a basso e quello ad alto livello semplificando così il lavoro di programmazione}
 }
 
+\newglossaryentry{guig}
+{
+    name=\glslink{gui}{GUI},
+    text=Graphical User Interface,
+    sort=Graphical User Interface,
+    description={L'interfaccia grafica, nota anche come GUI (dall'inglese Graphical User Interface), in informatica è un tipo di interfaccia utente che consente l'interazione uomo-macchina in modo visuale utilizzando rappresentazioni grafiche (es. widget) piuttosto che utilizzando i comandi tipici di un'interfaccia a riga di comando}
+}
+
 \newglossaryentry{umlg}
 {
     name=\glslink{uml}{UML},
     text=UML,
     sort=uml,
     description={in ingegneria del software \emph{UML, Unified Modeling Language} (ing. linguaggio di modellazione unificato) è un linguaggio di modellazione e specifica basato sul paradigma object-oriented. L'\emph{UML} svolge un'importantissima funzione di ``lingua franca'' nella comunità della progettazione e programmazione a oggetti. Gran parte della letteratura di settore usa tale linguaggio per descrivere soluzioni analitiche e progettuali in modo sintetico e comprensibile a un vasto pubblico}
+}
+
+\newglossaryentry{backendg}
+{
+    name=\glslink{backend}{BE},
+    text=Backend,
+    sort=backend,
+    description={in informatica con il termine \emph{Backend} si intende l'insieme delle applicazioni e dei programmi con cui l'utente non interagisce direttamente ma che sono essenziali al funzionamento del sistema}
+}
+
+\newglossaryentry{frontendg}
+{
+    name=\glslink{frontend}{FE},
+    text=Frontend,
+    sort=frontend,
+    description={in informatica con il termine \emph{Frontend} si intende la parte visibile all'utente di un programma e con cui egli può interagire, tipicamente un'interfaccia utente}
+}
+
+
+
+\newglossaryentry{Entita'-Relazione}
+{
+    name=\glslink{Entita'-Relazione}{ER},
+    text=Entita'-Relazione,
+    sort=Entita'-Relazione,
+    description={In informatica, nell'ambito della progettazione dei database, il modello entità-relazione (o modello entità-associazione; più comune modello E-R) è un modello teorico per la rappresentazione concettuale e grafica dei dati a un alto livello di astrazione}
+}
+
+\newglossaryentry{inversion-of-controlg}
+{
+    name=\glslink{inversion of control}{IoC},
+    text=Inversion of Control,
+    sort=Inversion of Control,
+    description={L'\emph{Inversion of Control} è un principio architetturale basato sul concetto di invertire il controllo del flusso di sistema rispetto alla programmazione tradizionale. Nella programmazione tradizionale la logica di tale flusso è definita esplicitamente dallo sviluppatore, che si occupa tra le altre cose di tutte le operazioni di creazione, inizializzazione ed invocazione dei metodi degli oggetti. L'IoC invece inverte il controllo}
+}
+
+\newglossaryentry{endpointg}
+{
+    name=\glslink{endpoint}{Endpoint},
+    text=Endpoint,
+    sort=Endpoint,
+    description={Una comunicazione \emph{endpoint} è un nodo di comunicazione rilevabile la cui portata può essere variata per restringere o ampliare la zona di ricerca. Gli endpoint favoriscono uno strato di astrazione programmabile per cui sistemi software e/o sottosistemi possono comunicare tra di loro, inoltre i mezzi di comunicazione sono disaccoppiati dai sottosistemi di comunicazione}
+}
+
+\newglossaryentry{restg}
+{
+    name=\glslink{rest}{REST},
+    text=Representational State Transfer,
+    sort=Representational State Transfer,
+    description={\emph{Representational state transfer} (REST) è uno stile architetturale (di architettura software) per i sistemi distribuiti. L'architettura REST si basa su HTTP. Il funzionamento prevede una struttura degli URL ben definita che identifica univocamente una risorsa o un insieme di risorse e l'utilizzo dei metodi HTTP specifici per il recupero di informazioni (GET), per la modifica (POST, PUT, PATCH, DELETE) e per altri scopi (OPTIONS, ecc.)}
+}
+
+\newglossaryentry{dbmsg}
+{
+    name=\glslink{dbms}{DBMS},
+    text=Database Management System,
+    sort=Database Management System,
+    description={In informatica, un \emph{Database Management System} (abbreviato in DBMS o Sistema di gestione di basi di dati) è un sistema software progettato per consentire la creazione, la manipolazione e l'interrogazione efficiente di database.}
+}
+
+\newglossaryentry{localstorageg}
+{
+    name=\glslink{localstorage}{Local Storage},
+    text=Local Storage,
+    sort=Local Storage,
+    description={Il \textit{Local Storage} fornisce accesso all'interfaccia del W3C Web Storage. Quest'ultima fornisce alle applicazioni web metodi e protocolli per l'archiviazione dei dati lato client. L'archiviazione Web supporta l'archiviazione dei dati persistenti, simile ai cookie ma con una capacità notevolmente migliorata}
+}
+
+\newglossaryentry{cookieg}
+{
+    name=\glslink{cookie}{Cookie},
+    text=Cookie,
+    sort=Cookie,
+    description={Gli HTTP cookie sono un tipo particolare di magic cookie (una sorta di gettone identificativo) e vengono utilizzati dalle applicazioni web lato server per archiviare e recuperare informazioni a lungo termine sul lato client}
+}
+
+\newglossaryentry{open-sourceg}
+{
+    name=\glslink{opensource}{open source},
+    text=open source,
+    sort=open source,
+    description={Con open source (in italiano sorgente aperto), in informatica, si indica un tipo di software o il suo modello di sviluppo o distribuzione. Un software open source è reso tale per mezzo di una licenza attraverso cui i detentori dei diritti favoriscono la modifica, lo studio, l'utilizzo e la redistribuzione del codice sorgente}
+}
+
+\newglossaryentry{licenza-mit-g}
+{
+    name=\glslink{licenzamit}{licenza MIT},
+    text=licenza MIT,
+    sort=licenza MIT,
+    description={La Licenza MIT (MIT License in inglese) è una licenza di software libero creata dal Massachusetts Institute of Technology (MIT)}
+}
+
+\newglossaryentry{frameworkg}
+{
+    name=\glslink{framework}{framework},
+    text=framework,
+    sort=framework,
+    description={Un framework, termine della lingua inglese che può essere tradotto come struttura o quadro strutturale, in informatica e specificamente nello sviluppo software, è un'architettura logica di supporto (spesso un'implementazione logica di un particolare design pattern) sulla quale un software può essere progettato e realizzato, spesso facilitandone lo sviluppo da parte del programmatore}
 }
